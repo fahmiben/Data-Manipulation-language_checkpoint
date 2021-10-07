@@ -1,0 +1,24 @@
+CREATE TABLE Customer
+(
+    Customer_id INT PRIMARY KEY NOT NULL,
+    customer_Name VARCHAR(50) NOT NUL,
+    customer_Tel NUMBER(8.2)
+);
+
+
+CREATE TABLE Product
+(
+    Product_id INT PRIMARY KEY NOT NULL,
+    product_Name VARCHAR(50) NOT NUL,
+    category VARCHAR(50)
+    Price NUMBER(8.2)
+);
+
+CREATE TABLE Orders
+(
+    Customer_id int FOREIGN KEY REFERENCES Customer(CustomerID),
+    Product_id int FOREIGN KEY REFERENCES Product(ProducID);
+    OrderDate VARCHAR(50),
+    quantity VARCHAR(50),
+    total_amount NUMBER(8.2)
+);
